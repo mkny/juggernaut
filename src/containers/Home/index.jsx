@@ -1,12 +1,8 @@
 import React from 'react'
-import { withTranslation } from 'react-i18next'
 import PropTypes from 'prop-types'
-import {
-  StyledContainer,
-  StyledTitle,
-  StyledSubtitle
-} from './style'
+import { withTranslation } from 'react-i18next'
 import logo from 'assets/images/juggernaut.gif'
+import { StyledContainer, StyledTitle, StyledSubtitle } from './style'
 
 const Home = ({ t }) => (
   <StyledContainer>
@@ -25,7 +21,7 @@ const Home = ({ t }) => (
 )
 
 Home.propTypes = {
-  t: PropTypes.func
+  t: PropTypes.func.isRequired
 }
 
 export default withTranslation()(Home)

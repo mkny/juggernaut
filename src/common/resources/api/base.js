@@ -8,7 +8,7 @@ const getConfig = () => ({
     Accept: 'application/json',
     'Accept-Language': 'pt-BR'
   },
-  paramsSerializer(params) {
+  paramsSerializer (params) {
     return qs.stringify(params, { arrayFormat: 'repeat' })
   }
 })
@@ -23,7 +23,7 @@ const api = (baseURL, config) => {
   axiosApi.request = (path, options) => {
     const mergedOptions = defaultsDeep(options, getConfig())
 
-    return axiosApi(path, mergedOptions).then((resp) => resp.data)
+    return axiosApi(path, mergedOptions).then(resp => resp.data)
   }
 
   axiosApi.interceptors.request.use(validateRequest)
