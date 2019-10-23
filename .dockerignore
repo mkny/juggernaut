@@ -1,0 +1,6 @@
+.github
+build
+doc*
+.all-contributorssrc
+netlify.toml
+node_modules
